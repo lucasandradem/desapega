@@ -4,9 +4,10 @@ export type Product = {
   price: number;
   category:
     | "Sala"
-    | "Quarto"
-    | "Escritório"
-    | "Eletrodomésticos"
+    // | "Quarto"
+    // | "Escritório"
+    // | "Eletrodomésticos"
+    | "Área gourmet"
     | "Iluminação";
   description: string;
   dimensions?: string;
@@ -18,7 +19,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "pendente-led-anello-triplo",
-    name: "Pendente LED Anello Redondo Triplo 4000K 65W Bivolt (D) 60 cm",
+    name: "Pendente LED Anello Redondo Triplo 60 cm",
     price: 800,
     category: "Iluminação",
     description:
@@ -66,5 +67,19 @@ export const products: Product[] = [
     ],
     referenceUrl: "https://a.co/d/07B2Y3UL",
     referenceLabel: "Ver produto na Amazon ↗",
+  },
+  {
+    id: "mesa-saarinen-oval-marmore",
+    name: "Mesa Saarinen Oval Mármore",
+    price: 2500,
+    category: "Área gourmet",
+    description:
+      "Mesa de jantar Saarinen oval com tampo em mármore, contra-tampo em MDF e base tulipa em alumínio fundido com pintura automotiva PU. Inspirada no icônico design criado por Eero Saarinen em 1956, combina linhas orgânicas, elegância e versatilidade para salas de jantar e outros ambientes.",
+    dimensions: "150 cm (C) × 80 cm (L) × 77 cm (A)",
+    images: [
+      "/products/mesa-saarinen-oval/02.jpeg",
+      "/products/mesa-saarinen-oval/01.jpeg",
+      "/products/mesa-saarinen-oval/03.jpeg",
+    ],
   },
 ];

@@ -9,9 +9,10 @@ const WHATSAPP_NUMBER = "5579999999999"; // troque pelo seu número com DDI + DD
 const categories = [
   "Todos",
   "Sala",
-  "Quarto",
-  "Escritório",
-  "Eletrodomésticos",
+  // "Quarto",
+  // "Escritório",
+  // "Eletrodomésticos",
+  "Área gourmet",
   "Iluminação",
 ] as const;
 
