@@ -2,7 +2,12 @@ export type Product = {
   id: string;
   name: string;
   price: number;
-  category: "Sala" | "Quarto" | "Escritório" | "Eletrodomésticos";
+  category:
+    | "Sala"
+    | "Quarto"
+    | "Escritório"
+    | "Eletrodomésticos"
+    | "Iluminação";
   description: string;
   dimensions?: string;
   images: string[];
@@ -12,8 +17,22 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    id: "pendente-led-anello-triplo",
+    name: "Pendente LED Anello Redondo Triplo 4000K 65W Bivolt (D) 60 cm",
+    price: 800,
+    category: "Iluminação",
+    description:
+      "Pendente LED de design moderno, pensado para compor ambientes residenciais, comerciais ou empresariais. O conjunto de anéis proporciona iluminação bem distribuída pelo espaço, combinando funcionalidade e decoração.",
+    dimensions:
+      "Diâmetro: 60 cm • Potência: 65W • Temperatura de cor: 4000K • Bivolt",
+    images: ["/products/pendente-anello/01.png"],
+    referenceUrl:
+      "https://www.inspirehome.com.br/pendente-led-anello-redondo-triplo-3000k-92w-bivolt-o90cm-aluminio-montare-128-975-3000k/p?utm_source=google&utm_content=&utm_campaign=21346115649&gad_source=1&gad_campaignid=21346116912&gclid=CjwKCAjwsrbTBhAvEiwA0Bpp4TLtlnJyH4aplC-g81XbfDS2MzgJvebonkzr8vSVt8-xjp6u2xyvzhoCRssQAvD_BwE",
+    referenceLabel: "Ver produto na Inspire Home ↗",
+  },
+  {
     id: "mesa-redonda-mendoza",
-    name: "Mesa Redonda Mendoza TOK&STOK 1,30 m",
+    name: "Mesa Redonda Mendoza 1,30 m",
     price: 2500,
     category: "Sala",
     description:
@@ -21,6 +40,7 @@ export const products: Product[] = [
     dimensions: "Ø 1,30 m × 77 cm de altura • Peso: 46,5 kg",
     images: [
       "/products/mesa-mendoza/02.jpeg",
+      "/products/mesa-mendoza/03.jpeg",
       "/products/mesa-mendoza/04.jpeg",
       "/products/mesa-mendoza/05.jpeg",
       "/products/mesa-mendoza/01.jpeg",
@@ -39,8 +59,8 @@ export const products: Product[] = [
     dimensions:
       "60 cm (P) × 48 cm (L) × 82 cm (A) • Assento: aprox. 48 × 46 cm",
     images: [
-      "/products/cadeiras-rattan/02.jpeg",
       "/products/cadeiras-rattan/01.jpeg",
+      "/products/cadeiras-rattan/02.jpeg",
       "/products/cadeiras-rattan/03.jpeg",
       "/products/cadeiras-rattan/04.jpeg",
     ],

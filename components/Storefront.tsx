@@ -12,6 +12,7 @@ const categories = [
   "Quarto",
   "Escritório",
   "Eletrodomésticos",
+  "Iluminação",
 ] as const;
 
 function formatPrice(value: number) {
