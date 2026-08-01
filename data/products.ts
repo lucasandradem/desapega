@@ -68,6 +68,24 @@ export const products: Product[] = [
     ],
   },
   {
+    id: "sofa-retratil-astor",
+    name: "Sofá Retrátil 3 Lugares Astor Tok&Stok",
+    price: 2500,
+    category: "Sala",
+    description:
+      "Sofá retrátil de 3 lugares com estrutura em madeira maciça de eucalipto, percintas elásticas, molas, espuma de poliuretano D28, plumante siliconizado e revestimento 100% poliéster. Possui assento extensível/retrátil, pés maciços e acompanha 4 almofadas para o encosto com enchimento em fibra siliconizada plumante, forro em non woven e fechamento por zíper. Carga máxima suportável: 280 kg, distribuídos uniformemente.",
+    dimensions:
+      "216 cm (L) × 110 cm (P fechado) / 154 cm (P aberto) × 90 cm (A) • Assento: 45 cm de altura • Braços: 56 cm de altura • Peso: 90 kg",
+    images: [
+      "/products/sofa-astor/01.jpeg",
+      "/products/sofa-astor/02.jpeg",
+      "/products/sofa-astor/03.jpeg",
+    ],
+    referenceUrl:
+      "https://www.tokstok.com.br/sofa-retratil-3-lugares-cinza-claro-astor/p?idsku=359083&region_id=000003&utm_source=google&utm_medium=cpc&utm_campaign=23545821093&utm_term=193443983935&gad_source=1&gad_campaignid=23545821093&gbraid=0AAAAADGVPjXDP5vk-nkZDfI3uPZORsHHd&gclid=CjwKCAjwsrbTBhAvEiwA0Bpp4X4gQgccigUO8yCGVLEZuATEzd3reAOC0BeOrmBYzAHk1aw1n2xJ7xoC0goQAvD_BwE",
+    referenceLabel: "Ver produto na Tok&Stok ↗",
+  },
+  {
     id: "pendente-led-anello-triplo",
     name: "Pendente LED Anello Redondo Triplo 60 cm",
     price: 800,
