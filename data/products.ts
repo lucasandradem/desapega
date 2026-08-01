@@ -77,9 +77,9 @@ export const products: Product[] = [
     dimensions:
       "216 cm (L) × 110 cm (P fechado) / 154 cm (P aberto) × 90 cm (A) • Assento: 45 cm de altura • Braços: 56 cm de altura • Peso: 90 kg",
     images: [
+      "/products/sofa-astor/03.jpeg",
       "/products/sofa-astor/01.jpeg",
       "/products/sofa-astor/02.jpeg",
-      "/products/sofa-astor/03.jpeg",
     ],
     referenceUrl:
       "https://www.tokstok.com.br/sofa-retratil-3-lugares-cinza-claro-astor/p?idsku=359083&region_id=000003&utm_source=google&utm_medium=cpc&utm_campaign=23545821093&utm_term=193443983935&gad_source=1&gad_campaignid=23545821093&gbraid=0AAAAADGVPjXDP5vk-nkZDfI3uPZORsHHd&gclid=CjwKCAjwsrbTBhAvEiwA0Bpp4X4gQgccigUO8yCGVLEZuATEzd3reAOC0BeOrmBYzAHk1aw1n2xJ7xoC0goQAvD_BwE",
