@@ -31,7 +31,7 @@ export const products: Product[] = [
   },
   {
     id: "cadeiras-jantar-rattan-linho",
-    name: "Cadeiras de Jantar Madeira Maciça Estofada em Linho Bege Claro Encosto Rattan",
+    name: "Conjunto com 4 cadeiras de Jantar Madeira Maciça Estofada em Linho Bege Claro Encosto Rattan",
     price: 1200,
     category: "Sala",
     description:
@@ -39,8 +39,8 @@ export const products: Product[] = [
     dimensions:
       "60 cm (P) × 48 cm (L) × 82 cm (A) • Assento: aprox. 48 × 46 cm",
     images: [
-      "/products/cadeiras-rattan/01.jpeg",
       "/products/cadeiras-rattan/02.jpeg",
+      "/products/cadeiras-rattan/01.jpeg",
       "/products/cadeiras-rattan/03.jpeg",
       "/products/cadeiras-rattan/04.jpeg",
     ],

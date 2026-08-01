@@ -15,11 +15,11 @@ function formatPrice(value: number) {
 export default function ProductCard({
   product,
   onBuy,
-  onExpand,
+  onDetails,
 }: {
   product: Product;
   onBuy: (product: Product) => void;
-  onExpand: (image: string) => void;
+  onDetails: (product: Product) => void;
 }) {
   const [activeImage, setActiveImage] = useState(0);
 
@@ -44,8 +44,8 @@ export default function ProductCard({
     <article className="card" id={product.id}>
       <button
         className="mainImageButton"
-        onClick={() => onExpand(product.images[activeImage])}
-        aria-label={`Ampliar foto de ${product.name}`}
+        onClick={() => onDetails(product)}
+        aria-label={`Ver detalhes de ${product.name}`}
       >
         <img
           className="mainImage"
@@ -72,38 +72,35 @@ export default function ProductCard({
       </div>
 
       <div className="cardBody">
-        <div className="category">{product.category}</div>
-        <h2 className="productName">{product.name}</h2>
-        <h4 className="price">{formatPrice(product.price)}</h4>
-        <p className="description">{product.description}</p>
-        {product.dimensions && (
-          <p className="dimensions">
-            <strong>Dimensões:</strong> {product.dimensions}
-          </p>
-        )}
-        {product.referenceUrl && (
-          <a
-            className="referenceLink"
-            href={product.referenceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {product.referenceLabel ?? "Ver produto ↗"}
-          </a>
-        )}
-
-        <div className="actions">
-          <button className="buyButton" onClick={() => onBuy(product)}>
-            Comprar
-          </button>
+        <div className="cardInfo">
+          <div className="category">{product.category}</div>
           <button
-            className="shareButton"
-            onClick={handleShare}
-            aria-label={`Compartilhar ${product.name}`}
-            title="Compartilhar"
+            className="productNameButton"
+            onClick={() => onDetails(product)}
           >
-            <Share2 size={20} />
+            <h2 className="productName">{product.name}</h2>
           </button>
+          <div className="price">{formatPrice(product.price)}</div>
+        </div>
+
+        <div className="cardFooter">
+          <button className="detailsButton" onClick={() => onDetails(product)}>
+            Ver detalhes
+          </button>
+
+          <div className="actions">
+            <button className="buyButton" onClick={() => onBuy(product)}>
+              Comprar
+            </button>
+            <button
+              className="shareButton"
+              onClick={handleShare}
+              aria-label={`Compartilhar ${product.name}`}
+              title="Compartilhar"
+            >
+              <Share2 size={20} />
+            </button>
+          </div>
         </div>
       </div>
     </article>

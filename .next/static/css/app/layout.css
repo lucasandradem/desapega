@@ -43,7 +43,6 @@ a {
 .header {
   padding: 28px 0 18px;
 }
-
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -97,6 +96,7 @@ h1 {
   grid-gap: 22px;
   gap: 22px;
   padding-bottom: 110px;
+  align-items: stretch;
 }
 
 .card {
@@ -105,6 +105,9 @@ h1 {
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .mainImageButton {
@@ -148,7 +151,17 @@ h1 {
 
 .cardBody {
   padding: 18px 16px 16px;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
 }
+.cardInfo {
+  min-height: 118px;
+}
+.cardFooter {
+  margin-top: auto;
+}
+
 .category {
   color: var(--accent);
   font-weight: 700;
@@ -156,33 +169,42 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+
+.productNameButton {
+  border: 0;
+  padding: 0;
+  background: none;
+  text-align: left;
+  color: inherit;
+}
+.productNameButton:hover .productName {
+  color: var(--accent);
+}
+
 .productName {
   margin: 6px 0 6px;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
 }
 .price {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
-  margin-bottom: 12px;
   color: #1f4b3f;
 }
-.description,
-.dimensions {
-  color: var(--muted);
-  margin: 0 0 7px;
-  line-height: 1.5;
-}
-.dimensions strong {
-  color: #404040;
-}
-.referenceLink {
-  display: inline-block;
-  margin-top: 5px;
+
+.detailsButton {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
   color: var(--accent);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  padding: 12px 16px;
+  font-weight: 800;
+  margin-top: 14px;
+}
+.detailsButton:hover {
+  background: #f7faf8;
 }
 
 .actions {
@@ -190,9 +212,10 @@ h1 {
   grid-template-columns: 1fr auto;
   grid-gap: 10px;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 10px;
 }
-.buyButton {
+.buyButton,
+.detailsBuyButton {
   border: 0;
   border-radius: 12px;
   background: var(--accent);
@@ -200,7 +223,8 @@ h1 {
   padding: 14px 18px;
   font-weight: 800;
 }
-.buyButton:hover {
+.buyButton:hover,
+.detailsBuyButton:hover {
   background: var(--accent-strong);
 }
 .shareButton {
@@ -210,6 +234,111 @@ h1 {
   background: white;
 }
 
+/* Detalhes: bottom sheet no mobile */
+.detailsOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.58);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.detailsModal {
+  position: relative;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.25);
+}
+.detailsHandle {
+  width: 44px;
+  height: 5px;
+  border-radius: 999px;
+  background: #d7d3cc;
+  margin: 10px auto 2px;
+}
+.detailsClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  display: grid;
+  place-items: center;
+}
+.detailsGallery {
+  padding: 12px 16px 0;
+}
+.detailsMainImageButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+}
+.detailsMainImage {
+  display: block;
+  width: 100%;
+  max-height: 43vh;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.detailsThumbnails {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0 2px;
+}
+.detailsContent {
+  padding: 18px 20px 28px;
+}
+.detailsTitle {
+  margin: 6px 42px 4px 0;
+  font-size: 26px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.detailsPrice {
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.detailsSection {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.detailsSection h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.detailsSection p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.referenceLink {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.detailsBuyButton {
+  width: 100%;
+  margin-top: 22px;
+}
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -217,7 +346,7 @@ h1 {
   display: grid;
   place-items: end center;
   padding: 14px;
-  z-index: 1000;
+  z-index: 1050;
 }
 .modal {
   width: min(100%, 460px);
@@ -321,6 +450,37 @@ h1 {
   }
   .floatingWhatsapp {
     display: none;
+  }
+
+  .detailsOverlay {
+    align-items: center;
+    padding: 24px;
+  }
+  .detailsModal {
+    width: min(920px, 100%);
+    max-height: 88vh;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.92fr);
+    overflow: hidden;
+  }
+  .detailsHandle {
+    display: none;
+  }
+  .detailsGallery {
+    padding: 20px;
+    overflow-y: auto;
+    background: #faf9f6;
+  }
+  .detailsContent {
+    padding: 34px 30px;
+    overflow-y: auto;
+  }
+  .detailsMainImage {
+    max-height: 60vh;
+  }
+  .detailsTitle {
+    font-size: 30px;
   }
 }
 
