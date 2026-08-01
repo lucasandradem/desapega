@@ -88,7 +88,7 @@ export default function ProductCard({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver produto na Tok&Stok ↗
+            {product.referenceLabel ?? "Ver produto ↗"}
           </a>
         )}
 
