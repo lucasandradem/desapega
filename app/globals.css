@@ -431,6 +431,141 @@ h1 {
   padding: 34px 0 80px;
 }
 
+/* Mobile first: cards compactos e 2 por linha quando houver espaço */
+@media (min-width: 390px) and (max-width: 719px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .header {
+    padding: 22px 0 12px;
+  }
+  h1 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .filters {
+    padding: 12px 0 18px;
+  }
+  .filterButton {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-bottom: 94px;
+  }
+
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.035);
+  }
+
+  .mainImage {
+    aspect-ratio: 1 / 1;
+  }
+
+  .thumbnails {
+    gap: 5px;
+    padding: 7px 8px 0;
+  }
+  .thumbnail {
+    width: 38px;
+    height: 32px;
+    border-radius: 6px;
+  }
+
+  .cardBody {
+    padding: 10px 9px 9px;
+  }
+  .cardInfo {
+    min-height: 88px;
+  }
+  .category {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+
+  .productNameButton {
+    width: 100%;
+  }
+  .productName {
+    margin: 4px 0 5px;
+    font-size: 14px;
+    line-height: 1.22;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 34px;
+  }
+
+  .price {
+    font-size: 17px;
+  }
+
+  .detailsButton {
+    margin-top: 8px;
+    padding: 8px 7px;
+    border-radius: 9px;
+    font-size: 12px;
+  }
+
+  .actions {
+    gap: 6px;
+    margin-top: 6px;
+  }
+  .buyButton {
+    padding: 9px 6px;
+    border-radius: 9px;
+    font-size: 12px;
+  }
+  .shareButton {
+    width: 36px;
+    border-radius: 9px;
+  }
+  .shareButton svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 389px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+  .grid {
+    gap: 14px;
+  }
+  .mainImage {
+    aspect-ratio: 4 / 3;
+  }
+  .thumbnails {
+    padding: 8px 10px 0;
+  }
+  .thumbnail {
+    width: 52px;
+    height: 42px;
+  }
+  .cardBody {
+    padding: 13px 12px 12px;
+  }
+  .cardInfo {
+    min-height: 100px;
+  }
+  .productName {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 21px;
+  }
+}
+
 @media (min-width: 720px) {
   .header {
     padding-top: 48px;
