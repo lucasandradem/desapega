@@ -5,7 +5,7 @@ import { MessageCircle, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import ProductCard from "./ProductCard";
 
-const WHATSAPP_NUMBER = "5579999999999"; // troque pelo seu número com DDI + DDD
+const WHATSAPP_NUMBER = "5579998321317";
 const categories = [
   "Todos",
   "Sala",
@@ -92,6 +92,30 @@ export default function Storefront() {
           <p className="empty">Nenhum item nesta categoria no momento.</p>
         )}
       </main>
+
+      <footer className="contactFooter">
+        <div className="container contactFooterInner">
+          <div>
+            <div className="eyebrow">Entre em contato</div>
+            <h2>Ficou interessado em algum item?</h2>
+            <p>
+              Fale comigo pelo WhatsApp para tirar dúvidas, verificar
+              disponibilidade ou combinar a compra.
+            </p>
+          </div>
+          <a
+            className="footerWhatsappButton"
+            href={whatsappLink(
+              "Olá! Vi o site de desapego e gostaria de mais informações.",
+            )}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <MessageCircle size={21} />
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </footer>
 
       <a
         className="floatingWhatsapp"

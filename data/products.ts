@@ -18,20 +18,6 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "pendente-led-anello-triplo",
-    name: "Pendente LED Anello Redondo Triplo 60 cm",
-    price: 800,
-    category: "Iluminação",
-    description:
-      "Pendente LED de design moderno, pensado para compor ambientes residenciais, comerciais ou empresariais. O conjunto de anéis proporciona iluminação bem distribuída pelo espaço, combinando funcionalidade e decoração.",
-    dimensions:
-      "Diâmetro: 60 cm • Potência: 65W • Temperatura de cor: 4000K • Bivolt",
-    images: ["/products/pendente-anello/01.png"],
-    referenceUrl:
-      "https://www.inspirehome.com.br/pendente-led-anello-redondo-triplo-3000k-92w-bivolt-o90cm-aluminio-montare-128-975-3000k/p?utm_source=google&utm_content=&utm_campaign=21346115649&gad_source=1&gad_campaignid=21346116912&gclid=CjwKCAjwsrbTBhAvEiwA0Bpp4TLtlnJyH4aplC-g81XbfDS2MzgJvebonkzr8vSVt8-xjp6u2xyvzhoCRssQAvD_BwE",
-    referenceLabel: "Ver produto na Inspire Home ↗",
-  },
-  {
     id: "mesa-redonda-mendoza",
     name: "Mesa Redonda Mendoza 1,30 m",
     price: 2500,
@@ -42,7 +28,6 @@ export const products: Product[] = [
     images: [
       "/products/mesa-mendoza/02.jpeg",
       "/products/mesa-mendoza/03.jpeg",
-      "/products/mesa-mendoza/04.jpeg",
       "/products/mesa-mendoza/05.jpeg",
       "/products/mesa-mendoza/01.jpeg",
     ],
@@ -81,5 +66,19 @@ export const products: Product[] = [
       "/products/mesa-saarinen-oval/01.jpeg",
       "/products/mesa-saarinen-oval/03.jpeg",
     ],
+  },
+  {
+    id: "pendente-led-anello-triplo",
+    name: "Pendente LED Anello Redondo Triplo 60 cm",
+    price: 800,
+    category: "Iluminação",
+    description:
+      "Pendente LED de design moderno, pensado para compor ambientes residenciais, comerciais ou empresariais. O conjunto de anéis proporciona iluminação bem distribuída pelo espaço, combinando funcionalidade e decoração.",
+    dimensions:
+      "Diâmetro: 60 cm • Potência: 65W • Temperatura de cor: 4000K • Bivolt",
+    images: ["/products/pendente-anello/01.png"],
+    referenceUrl:
+      "https://www.inspirehome.com.br/pendente-led-anello-redondo-triplo-3000k-92w-bivolt-o90cm-aluminio-montare-128-975-3000k/p?utm_source=google&utm_content=&utm_campaign=21346115649&gad_source=1&gad_campaignid=21346116912&gclid=CjwKCAjwsrbTBhAvEiwA0Bpp4TLtlnJyH4aplC-g81XbfDS2MzgJvebonkzr8vSVt8-xjp6u2xyvzhoCRssQAvD_BwE",
+    referenceLabel: "Ver produto na Inspire Home ↗",
   },
 ];

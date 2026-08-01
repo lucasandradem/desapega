@@ -462,7 +462,7 @@ h1 {
   }
 
   .grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     padding-bottom: 94px;
   }
@@ -624,3 +624,70 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Rodapé de contato */
+.contactFooter {
+  margin-top: 18px;
+  padding: 38px 0 96px;
+  background: var(--accent);
+  color: white;
+}
+
+.contactFooterInner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contactFooter .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.contactFooter h2 {
+  margin: 7px 0 8px;
+  font-size: clamp(25px, 7vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.contactFooter p {
+  margin: 0;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+}
+
+.footerWhatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: white;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.footerWhatsappButton:hover {
+  background: #f4f2ed;
+}
+
+@media (min-width: 720px) {
+  .contactFooter {
+    padding: 48px 0;
+  }
+
+  .contactFooterInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footerWhatsappButton {
+    width: auto;
+    min-width: 220px;
+  }
+}
+
