@@ -73,7 +73,6 @@ export default function ProductCard({
 
       <div className="cardBody">
         <div className="cardInfo">
-          <div className="category">{product.category}</div>
           <button
             className="productNameButton"
             onClick={() => onDetails(product)}
