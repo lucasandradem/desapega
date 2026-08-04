@@ -2,19 +2,10 @@
 
 import { products, type Product } from "@/data/products";
 import { MessageCircle, X } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 
 const WHATSAPP_NUMBER = "5579998321317";
-const categories = [
-  "Todos",
-  "Sala",
-  // "Quarto",
-  // "Escritório",
-  // "Eletrodomésticos",
-  "Área gourmet",
-  "Iluminação",
-] as const;
 
 function formatPrice(value: number) {
   return new Intl.NumberFormat("pt-BR", {
@@ -29,17 +20,10 @@ function whatsappLink(message: string) {
 }
 
 export default function Storefront() {
-  const [category, setCategory] =
-    useState<(typeof categories)[number]>("Todos");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [detailsProduct, setDetailsProduct] = useState<Product | null>(null);
   const [detailsImageIndex, setDetailsImageIndex] = useState(0);
   const [expandedImage, setExpandedImage] = useState<string | null>(null);
-
-  const filteredProducts = useMemo(() => {
-    if (category === "Todos") return products;
-    return products.filter((product) => product.category === category);
-  }, [category]);
 
   function openDetails(product: Product) {
     setDetailsProduct(product);
@@ -61,25 +45,13 @@ export default function Storefront() {
             Móveis e itens que fizeram parte da nossa casa e agora podem ganhar
             um novo lar.
           </p>
-
-          <nav className="filters" aria-label="Filtrar por categoria">
-            {categories.map((item) => (
-              <button
-                key={item}
-                className={`filterButton ${category === item ? "active" : ""}`}
-                onClick={() => setCategory(item)}
-              >
-                {item}
-              </button>
-            ))}
-          </nav>
         </div>
       </header>
 
       <main className="container">
-        {filteredProducts.length ? (
+        {products.length ? (
           <section className="grid">
-            {filteredProducts.map((product) => (
+            {products.map((product) => (
               <ProductCard
                 key={product.id}
                 product={product}
@@ -188,7 +160,6 @@ export default function Storefront() {
             </div>
 
             <div className="detailsContent">
-              <div className="category">{detailsProduct.category}</div>
               <h2 id="details-title" className="detailsTitle">
                 {detailsProduct.name}
               </h2>
